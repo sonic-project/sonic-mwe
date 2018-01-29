@@ -11,10 +11,10 @@ php_flag html_errors off
 <IfModule mod_rewrite.c>
 
 RewriteEngine On
-RewriteBase /sonic-sdk/
+RewriteBase /sonic/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ src/FrontController.php?clean_url=$1
+RewriteRule ^(.*)$ server/server.php?clean_url=$1
 
 </IfModule>
