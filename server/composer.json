@@ -1,0 +1,20 @@
+{
+	"name": "sgoendoer/sonic-mwe",
+	"description": "SONIC MWE",
+	"version": "0.0.1",
+	"license": "MIT",
+	"require":
+	{
+		"php": "^5.6 || ^7.0",
+		"sgoendoer/json": "^0.2.1",
+		"sgoendoer/sonic": "dev-master",
+		"sgoendoer/esquery": "dev-master"
+	},
+	"autoload":
+	{
+		"psr-4":
+		{
+			"sgoendoer\\SonicMWE\\": "src/"
+		}
+	}
+}
