@@ -1,0 +1,20 @@
+AddDefaultCharset utf-8
+
+# php_flag register_globals on
+php_flag allow_url_fopen on
+
+#php_value error_reporting 8
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteBase /sonic/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ server/server.php?clean_url=$1
+
+</IfModule>
